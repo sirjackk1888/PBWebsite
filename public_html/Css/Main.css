@@ -1,0 +1,245 @@
+/* 
+    Created on : Feb 13, 2017, 3:34:28 PM
+    Author     : Kelly B Ward
+    
+/* ================= Onload inmportant styling =============== */
+body {
+    overflow:hidden;
+}
+.hidden {
+    visibility:hidden;
+    opacity:0;
+}
+.visible {
+    visibility:visible;
+    opacity:1;
+}
+/* ================= Header styling ========================== */
+
+header {
+    position:absolute;
+    width:100%;
+    top:0%;
+    left:0%;
+    height:15%;
+    font-size:2vw;
+    background-image: url("../images/headerBackground.png"), url("../images/upperRightStraight.jpg");
+    background-size:contain, cover;
+    background-position: left top, right top;
+    background-repeat:no-repeat, no-repeat;
+    color:rgba(0,0,0,0.6); 
+    border-style:solid;
+    border-width: 2px;
+    border-color:black;
+}
+
+/* ================= Navigation bar styling ================== */
+
+nav {
+    position:absolute;
+    left:5%;
+    top:11.5%;
+    height:3%;
+    width:80%;
+    z-index:50;
+    font-size:.75vw;
+    
+}
+.navBox {
+    display:inline;
+    width:15%;
+    height:90%;
+    position:absolute;
+    text-align:center;
+    background-color:rgba(128,128,128,0.7);
+    font-size:1.2vw;
+    border-color: rgba(128,128,128,0.9);
+    border-radius:5px;
+    color:white;
+    cursor:pointer; 
+}
+#navOne {
+    left:66%;
+    width:10%;
+    top:12.5%;
+}
+#navTwo {
+    left:76.5%;
+    width:10%;
+}
+#navThree {
+    left:87%;
+}
+#navFour {
+    left:102.5%;
+}
+/* ================= Main content styling ==================== */
+.transition {
+    -webkit-transition: .25s linear;
+    -moz-transition: .25s linear;
+    -ms-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear;
+}
+.transitionOne {
+    -webkit-transition: .5s linear;
+    -moz-transition: .5s linear;
+    -ms-transition: .5s linear;
+    -o-transition: .5s linear;
+    transition: .5s linear;
+}
+main {
+    position:absolute;
+    left:0%;
+    top:15%;
+    height:80%;
+    width:100%;
+    border-style:solid;
+    border-width: 2px;
+    border-color:rgba(25,25,112,0.7);
+    background-image: url("../images/wallpaper.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/* - - - - - text container and initial text styling - - - - - */
+#textContainer {
+    position:absolute;
+    color:white;
+    display:table;
+    width:68%;
+    left:1%;
+    top:2.5%;
+    height:97.5%;
+}
+.col {
+    display:table-cell;
+}
+.leftTable, .rightTable, .topTable, .bottomTable{
+    position:absolute;
+    width:5%;
+    height:45%;
+    font-size:1.5vw;
+}
+.leftTable { left:0%; }
+.rightTable { left:50%; }
+.topTable { top:5%; }
+.bottomTable { top:57.5%; }
+.bottomRightAdjust { top:42.5%; }
+.tableHeader {
+    position:absolute;
+    font-size:2vw;
+    color:rgba(25,25,112,0.8);
+    font-weight:bold;
+}
+.tableHeaderTopLeft {
+    top:2.5%;
+    left:4.5%;
+}
+.tableHeaderTopRight {
+    top:2.5%;
+    left:54%;
+}
+.tableHeaderBottomLeft {
+    top:55%;
+    left:4.5%;
+}
+.tableHeaderBottomRight {
+    top:35%;
+    left:55%;
+}
+/* - - - - - - - - - - Box styling - - - - - - - - - - - - - */
+.box {
+    display:inline;
+    position:absolute;
+    border-radius:10px;
+    background-color:rgba(128,128,128,0.4);
+    box-shadow: 5px 5px 5px rgba(25,25,112,0.9);
+    background-size:cover;
+    background-repeat:no-repeat;
+    color:white;
+    font-weight:bold;
+    overflow:hidden;
+    cursor:pointer;
+    z-index:10;
+}
+.boxClosed {
+    height:30%;
+    width:25%;
+    left:70% !important;
+    text-align:center;
+    font-size:3vw;
+}
+.boxClosed > img, .boxClosed > a, boxOpen > span {
+    visibility:visible;
+    opacity:1;
+}
+.boxOpen {
+    width:68%;
+    left:1%;
+    top: 2.5% !important;
+    height:95%;
+}
+.boxOpen > img, .boxOpen > a, boxClosed > span {
+    visibility:hidden;
+    opacity:0;
+} 
+.boxTransition {
+    height:30%;
+    width:25%;
+    left:25%;
+}
+main span img {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0%;
+    top:0%;
+    z-index:11;
+}
+span a {
+    position:absolute;
+    top:0%;
+    left:0%;
+    height:100%;
+    width:100%;
+    opacity:1;
+    z-index:5000;
+}
+#productsBox { top:2.5%; }
+#fabricationBox { top:35%; }
+#aboutPBBox { top:67.5%; }
+/* - - - - - - box subcontent styling - - - - - - - - - - */
+.subBox {
+    width:30%;
+    height:47%;
+}
+.row1 {top:2.5%;}
+.row2 {top:50.5%;}
+.column1 {left:2%;}
+.column2 { left:34%;}
+.column3 { left:66%;}
+/* ================= Footer styling ========================== */
+footer {
+    position:absolute;
+    left:0%;
+    top:95%;
+    width:100%;
+    height:5%;
+    background-color: rgba(25,25,112,0.4);
+}
+.footerBox {
+    position:absolute;
+    height:50%;
+    width:22.5%;
+    top:25%;
+    color:blue;
+    background-color:rgba(128,128,128,0.8);
+    font-size:1.25vw;
+    border-radius:5px;
+    text-align:center;
+        
+}
+#footerOne { left:5%; }
+#footerTwo { left:28%; }
+#footerThree { left:51%; }
+#footerFour { left:74%; }
