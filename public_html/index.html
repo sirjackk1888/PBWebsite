@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+Author: Kelly B Ward
+Project created: 02/13/2017
+Version: 1.0
+-->
+<html>
+    <head>
+    <!-- - - - - - - - - - Meta - - - - - - - - - - - - - - - - - - - -  -->
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- - - - - - - - - - Links - - - - - - - - - - - - - - - - - - - - -->
+        <link rel="stylesheet" type="text/css" href="Css/Main.css">
+    <!-- - - - - - - - - - Onload specific Scripts - - - - - - - - - - - -->
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <header></header>
+        <!-- ===================== Navigation panel ======================== -->
+        <nav>
+            <a class="navBox" id="navOne" href="mailto:sales@precisionbelting.com">Contact us</a>
+            <a class="navBox" id="navTwo">
+                Products
+            </a>
+            <a class="navBox" id="navThree">
+                Fabrication Services
+            </a>
+            <a class="navBox" id="navFour">
+                About Precision Belting
+            </a>
+        </nav>
+        <!-- ===================== Main content ============================ -->
+        <main role="main">
+            <div class="transition" id="textContainer">
+                <div class="tableHeader tableHeaderTopLeft">
+                    Conveyor Belting
+                </div>
+                <div class="col leftTable topTable" style="width:60%">
+                    <ul>
+                        <li>European Style Flat Belting
+                        <li>PVC
+                        <li>Urethane
+                        <li>Light Weight Rubber
+                        <li>Mono / Multi-Filament
+                        <li>Food Grade Belting
+                        <li>Plastic Modular
+                        <li>Table-Top chain
+                        <li>Urethane Round & V
+                        <li>High Temperature Belting
+                        <li>Rough Top
+                        <li>Needled Felt
+                    </ul>
+                </div>
+                <div class="tableHeader tableHeaderTopRight">
+                    Power Transmission Belting
+                </div>
+                <div class="col rightTable topTable" style="width:60%">
+                    <ul>
+                        <li>Timing Belts
+                        <li>Metric Pitch Timing Belts
+                        <li>Polyurethane Belting
+                        <li>Linear Drive Belts
+                        <li>Steel / Kevlar cord
+                        <li>Open End Belting
+                        <li>Nylon Core Belting
+                    </ul>
+                </div>
+                <div class="tableHeader tableHeaderBottomLeft">
+                    Specialty Belting
+                </div>
+                <div class="col leftTable bottomTable" style="width:60%">
+                    <ul>
+                        <li>Custom Fabrication
+                        <li>Specialty Backings
+                        <li>Profiled Belts
+                        <li>Custom Grinding
+                        <li>Vacuum Belts
+                        <li>Perforated Belting
+                        <li>Teflon Coated Belting
+                        <li>Silicone
+                     </ul>
+                </div>
+                <div class="tableHeader tableHeaderBottomRight">
+                    Conveyor Components & Accessories
+                </div>
+                <div class="col rightTable bottomTable bottomRightAdjust" style="width:60%">
+                    <ul>
+                        <li>Sprockets and Sheaves
+                        <li>Rollers
+                        <li>Custom Molded Parts
+                        <li>Scraper Blades
+                        <li>Industrial Hose
+                        <li>Vacuum Cups
+                        <li>Custom Machined Parts
+                        <li>Pulley and Roller Coverings
+                     </ul>
+                </div>
+            </div>
+            <span class="transitionOne box boxClosed" id="productsBox" onclick="boxController(this)">
+                <img class="transitionOne" src="images/productsBackground.png" alt="imageFail">
+                <a class="transitionOne" ><br>Products<br>(Click Me)</a>
+                <span class="subBox" id="subBox1"></span>
+            </span>
+            <span  class="transitionOne box boxClosed" id="fabricationBox" onclick="boxController(this)">
+                <img class="transitionOne"  src="images/fabricationBackground.png" alt="imageFail">
+                <a class="transitionOne" ><br>Fabrication Services<br>(Click Me)</a>
+            </span>
+            <span  class="transitionOne box boxClosed" id="aboutPBBox" onclick="boxController(this)">
+                <img class="transitionOne"  src="images/timingBeltThree.png" alt="imageFail">
+                <a class="transitionOne" ><br>About Precision Belting<br>(Click Me)</a>
+            </span>
+        </main>
+        <!-- ===================== Footer ================================== -->
+        <footer>
+            <div class="footerBox" id="footerOne">
+                PO BOX 10307 * Rock Hill SC 29731
+            </div>
+            <div class="footerBox" id="footerTwo">
+                5453 Old York Rd * Rock Hill SC 29732
+            </div>
+            <div class="footerBox" id="footerThree">
+                Phone: (803)329-082189
+            </div>
+            <div class="footerBox" id="footerFour">
+                Fax: (803)329-0861
+            </div>
+        </footer>
+        <!-- ===================== Operation scripting ===================== -->
+        <script>
+        function debuggingAlertFunction() {
+            alert("debugging alert function reached");
+        }
+        var openBoxIdentifier;
+        
+        var obj = {
+                "productsBox": {
+                    "bx": document.getElementById('productsBox'),
+                    "bxI": "#productsBox > img",
+                    "bxA": "#productsBox > a"
+                },
+                "fabricationBox": {
+                    "bx": document.getElementById('fabricationBox'),
+                    "bxI": "#fabricationBox > img",
+                    "bxA": "#fabricationBox > a"
+                },
+                "aboutPBBox": {
+                    "bx": document.getElementById('aboutPBBox'),
+                    "bxI": "#aboutPBBox > img",
+                    "bxA": "#aboutPBBox > a"
+                }
+            };
+          
+        function closeBox(openBoxIdentifier, bx) {
+            $(openBoxIdentifier).removeClass('boxOpen').addClass('boxTransition');
+            window.setTimeout( function() {$(openBoxIdentifier).removeClass('boxTransition').addClass('boxClosed');}, 500);
+            window.setTimeout( function() {openBox(bx);}, 750); 
+            }
+        
+        function openBox(bx) {
+            $(bx).removeClass('boxClosed').addClass('boxTransition');
+            window.setTimeout( function() {$(bx).removeClass('boxTransition').addClass('boxOpen');}, 500);
+            window.setTimeout( function() {$(obj[bx.id].bxI).addClass('hidden');}, 500);
+            window.setTimeout( function() {$(obj[bx.id].bxA).addClass('hidden');}, 500);
+        }
+        
+        function checkBoxOpenStatus() {
+            if($("#productsBox").hasClass("boxOpen")) {
+                openBoxIdentifier = "#productsBox";
+            } else if($("#fabricationBox").hasClass("boxOpen")) {
+                openBoxIdentifier = "#fabricationBox";
+            } else if($("#aboutPBBox").hasClass("boxOpen")) {
+                openBoxIdentifier = "#aboutPBBox";
+            } else {
+                openBoxIdentifier = "";
+            }
+        }
+        
+        function boxController(bx) {
+            $("#textContainer").addClass('hidden');
+            checkBoxOpenStatus();
+            if(openBoxIdentifier !== "") {
+                closeBox(openBoxIdentifier, bx);
+            } else {
+                openBox(obj[bx.id].bx);
+            }
+        }
+        </script>
+    </body>
+</html>
