@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--
+Project Title: Precision Belting Website
 Author: Kelly B Ward
 Project created: 02/13/2017
 Version: 1.0
@@ -13,20 +14,20 @@ Version: 1.0
     <!-- - - - - - - - - - Links - - - - - - - - - - - - - - - - - - - - -->
         <link rel="stylesheet" type="text/css" href="Css/Main.css">
     <!-- - - - - - - - - - Onload specific Scripts - - - - - - - - - - - -->
-    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
     </head>
     <body>
         <header></header>
         <!-- ===================== Navigation panel ======================== -->
         <nav>
             <a class="navBox" id="navOne" href="mailto:sales@precisionbelting.com">Contact us</a>
-            <a class="navBox" id="navTwo">
+            <a class="navBox" id="navTwo" onclick="boxController(productsBox)">
                 Products
             </a>
-            <a class="navBox" id="navThree">
+            <a class="navBox" id="navThree" onclick="boxController(fabricationBox)">
                 Fabrication Services
             </a>
-            <a class="navBox" id="navFour">
+            <a class="navBox" id="navFour" onclick="boxController(aboutPBBox)">
                 About Precision Belting
             </a>
         </nav>
@@ -96,20 +97,131 @@ Version: 1.0
                         <li>Pulley and Roller Coverings
                      </ul>
                 </div>
+            </div><!-- text container div (initial screen text) -->
+            <div class="transitionOne box boxClosed clearFix" id="productsBox" onclick="boxController(this)">
+                <img class="transitionOne" src="images/productsBackground.jpg" alt="imageFail">
+                <a class="transitionOne" >Products<sub>(Click Me)</sub></a>
+                <div class="subBox box row1 column1 transitionOne" id="subBoxP1" onclick="subBoxController(productsBox, subBoxP1)">
+                    <p class="subBoxHeaderText">Conveyor Belting</p>
+                    <img class="transitionOne"  src="images/subBoxP1.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox P1</div>
+                </div>
+                <div class="subBox box row1 column2 transitionOne" id="subBoxP2" onclick="subBoxController(productsBox, this)">
+                    <p class="subBoxHeaderText">Power Transmission Belting</p>
+                    <img class="transitionOne"  src="images/subBoxP2.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox P2</div>
+                </div>
+                <div class="subBox box row1 column3 transitionOne" id="subBoxP3" onclick="subBoxController(productsBox, this)">
+                    <p class="subBoxHeaderText">Conveyor components and accessories</p>
+                    <img class="transitionOne"  src="images/subBoxP3.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox P3</div>
+                </div>
+                <div class="subBox box row2 column1 transitionOne" id="subBoxP4" onclick="subBoxController(productsBox, this)">
+                    <p class="subBoxHeaderText">Specialty belting</p>
+                    <img class="transitionOne"  src="images/subBoxP4.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox P4</div>
+                </div>
+                <div class="subBox box row2 column2 transitionOne" id="subBoxP5" onclick="subBoxController(productsBox, this)">
+                    <p class="subBoxHeaderText">Custom molded parts</p>
+                    <img class="transitionOne"  src="images/subBoxP5.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox P5</div>
+                </div>
+                <div class="subBox box row2 column3 transitionOne" id="subBoxP6" onclick="subBoxController(productsBox, this)">
+                    <p class="subBoxHeaderText">Round belting</p>
+                    <img class="transitionOne"  src="images/subBoxP6.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox P6</div>
+                </div>
+            </div><!-- products box container -->
+            <div  class="transitionOne box boxClosed" id="fabricationBox" onclick="boxController(this)">
+                <img class="transitionOne"  src="images/fabricationBackground.jpg" alt="imageFail">
+                <a class="transitionOne" >Fabrication Services<sub>(Click Me)</sub></a>
+                <div class="subBox box row1 column1 transitionOne" id="subBoxF1" onclick="subBoxController(fabricationBox, this)">
+                    <p class="subBoxHeaderText">Custom fabrications</p>
+                    <img class="transitionOne"  src="images/subBoxF1.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox F1</div>
+                </div>
+                <div class="subBox box row1 column2 transitionOne" id="subBoxF2" onclick="subBoxController(fabricationBox, this)">
+                    <p class="subBoxHeaderText">Roller lagging</p>
+                    <img class="transitionOne"  src="images/subBoxF2.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox F2</div>
+                </div>
+                <div class="subBox box row1 column3 transitionOne" id="subBoxF3" onclick="subBoxController(fabricationBox, this)">
+                    <p class="subBoxHeaderText">Profiled belts</p>
+                    <img class="transitionOne"  src="images/subBoxF3.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox F3</div>
+                </div>
+                <div class="subBox box row2 column1 transitionOne" id="subBoxF4" onclick="subBoxController(fabricationBox, this)">
+                    <p class="subBoxHeaderText">Perforated belting</p>
+                    <img class="transitionOne"  src="images/subBoxF4.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox F4</div>
+                </div>
+                <div class="subBox box row2 column2 transitionOne" id="subBoxF5" onclick="subBoxController(fabricationBox, this)">
+                    <p class="subBoxHeaderText">Teflon coated belting</p>
+                    <img class="transitionOne"  src="images/subBoxF5.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox F5</div>
+                </div>
+                <div class="subBox box row2 column3 transitionOne" id="subBoxF6" onclick="subBoxController(fabricationBox, this)">
+                    <p class="subBoxHeaderText">Silicone</p>
+                    <img class="transitionOne"  src="images/subBoxF6.jpg" alt="imageFail">
+                    <div class="hidden"> this will be the text for subBox F6</div>
+                </div>
+            </div><!-- fabrication box container -->
+            <div  class="transitionOne box boxClosed" id="aboutPBBox" onclick="boxController(aboutPBBox, this)">
+                <img class="transitionOne"  src="images/upperRightTwist.jpg" alt="imageFail">
+                <a class="transitionOne" >About <sub>Precision Belting<sub>(Click Me)</sub></sub></a>
+                <div class="subBox box row1 column1 transitionOne" id="subBoxA1" style="text-align:center;">
+                    <div class="superText">Precision Belting Inc.</div>
+                    <br><br>5453 Old York Hwy.<br> Rock Hill, SC 29732<br>
+                    (803) 329-2189<br>
+                    ------------------------------<br>
+                    P.O. Box 10307 <br>Rock Hill, SC 29731
+                        
+                </div>
+                <div class="subBox box row2 column1 transitionOne" id="subBoxA2" onclick="subBoxController(aboutPBBox, this)">
+                    <p class="hidden">Click me to display company history and information</p>
+                    <div class="hidden">This will be the text for subBox A2</div>
+                </div>
+                <div class="box row1 column2 transitionOne" id="map">Map fail</div>
+                
+            </div><!-- about box container -->
+            <div class="textContainer hidden transition" id="productsText">
+                Quick links
+                <ul>
+                    <li onclick="quickLink(subBoxP1)">Conveyor Belting
+                    <li onclick="quickLink(subBoxP2)">Power Transmission belting
+                    <li onclick="quickLink(subBoxP3)">Conveyor components and accessories
+                    <li onclick="quickLink(subBoxP4)">Specialty belting
+                    <li onclick="quickLink(subBoxP5)">Custom molded parts
+                    <li onclick="quickLink(subBoxP6)">Round belting
+                </ul>
             </div>
-            <span class="transitionOne box boxClosed" id="productsBox" onclick="boxController(this)">
-                <img class="transitionOne" src="images/productsBackground.png" alt="imageFail">
-                <a class="transitionOne" ><br>Products<br>(Click Me)</a>
-                <span class="subBox" id="subBox1"></span>
-            </span>
-            <span  class="transitionOne box boxClosed" id="fabricationBox" onclick="boxController(this)">
-                <img class="transitionOne"  src="images/fabricationBackground.png" alt="imageFail">
-                <a class="transitionOne" ><br>Fabrication Services<br>(Click Me)</a>
-            </span>
-            <span  class="transitionOne box boxClosed" id="aboutPBBox" onclick="boxController(this)">
-                <img class="transitionOne"  src="images/timingBeltThree.png" alt="imageFail">
-                <a class="transitionOne" ><br>About Precision Belting<br>(Click Me)</a>
-            </span>
+            <div class="textContainer hidden transition" id="fabricationText">
+                Quick links
+                <ul>
+                    <li onclick="quickLink(subBoxF1)">Custom Fabrication
+                    <li onclick="quickLink(subBoxF2)">Roller lagging
+                    <li onclick="quickLink(subBoxF3)">Profiled Belts
+                    <li onclick="quickLink(subBoxF4)">Perforated belting
+                    <li onclick="quickLink(subBoxF5)">Teflon(c) coated belting
+                    <li onclick="quickLink(subBoxF6)">Silicone
+                </ul>
+            </div>
+            <div class="textContainer hidden transition" id="aboutText">
+                <div class="blueText">Quick links
+                    <ul>
+                        <li onclick="quickLink(subBoxA2)">About Precision Belting
+                        <li onclick="quickLink(map)">Show map
+                    </ul>
+                </div>
+                <div>Contact information
+                    <ul>
+                        <li>Phone: (803)-329-2189
+                        <li>Fax: (803)-329-0861
+                        <li>PO BOX 10307, Rock Hill SC 29731
+                        <li>5453 Old York Rd, Rock Hill SC 29732
+                    </ul>
+                </div>
+            </div>
         </main>
         <!-- ===================== Footer ================================== -->
         <footer>
@@ -120,7 +232,7 @@ Version: 1.0
                 5453 Old York Rd * Rock Hill SC 29732
             </div>
             <div class="footerBox" id="footerThree">
-                Phone: (803)329-082189
+                Phone: (803)329-2189
             </div>
             <div class="footerBox" id="footerFour">
                 Fax: (803)329-0861
@@ -128,63 +240,283 @@ Version: 1.0
         </footer>
         <!-- ===================== Operation scripting ===================== -->
         <script>
-        function debuggingAlertFunction() {
+            function debuggingAlertFunction() {
             alert("debugging alert function reached");
         }
-        var openBoxIdentifier;
-        
-        var obj = {
+        </script>
+        <script>
+            var obj = {
                 "productsBox": {
                     "bx": document.getElementById('productsBox'),
-                    "bxI": "#productsBox > img",
-                    "bxA": "#productsBox > a"
+                    "txt" : document.getElementById('productsText'),
+                    "subBox" : {
+                        "subBoxP1": {
+                            "sb": document.getElementById('subBoxP1'),
+                            "sbN": "subBoxP1",
+                            "sbT": "#subBoxP1 > div",
+                            "sbP": "#subBoxP1 > p",
+                            "sbI": "#subBoxP1 > img",
+                            "qlI": "images/subBoxP1.jpg",
+                            "qlT": "Conveyor Belting",
+                            "qlP": document.getElementById('qlBoxPosition1')
+                        },
+                        "subBoxP2": {
+                            "sb": document.getElementById('subBoxP2'),
+                            "sbN": "subBoxP2",
+                            "sbT": "#subBoxP2 > div",
+                            "sbP": "#subBoxP2 > p",
+                            "sbI": "#subBoxP2 > img",
+                            "qlI": "images/subBoxP2.jpg",
+                            "qlT": "Power Transmission Belting",
+                            "qlP": document.getElementById('qlBoxPosition2')
+                        },
+                        "subBoxP3": {
+                            "sb": document.getElementById('subBoxP3'),
+                            "sbN": "subBoxP3",
+                            "sbT": "#subBoxP3 > div",
+                            "sbP": "#subBoxP3 > p",
+                            "sbI": "#subBoxP3 > img",
+                            "qlI": "images/subBoxP3.jpg",
+                            "qlT": "Conveyor Components and accessories",
+                            "qlP": document.getElementById('qlBoxPosition3')
+                        },
+                        "subBoxP4": {
+                            "sb": document.getElementById('subBoxP4'),
+                            "sbN": "subBoxP4",
+                            "sbT": "#subBoxP4 > div",
+                            "sbP": "#subBoxP4 > p",
+                            "sbI": "#subBoxP4 > img",
+                            "qlI": "images/subBoxP4.jpg",
+                            "qlT": "Specialty Belting",
+                            "qlP": document.getElementById('qlBoxPosition4')
+                        },
+                        "subBoxP5": {
+                            "sb": document.getElementById('subBoxP5'),
+                            "sbN": "subBoxP5",
+                            "sbT": "#subBoxP5 > div",
+                            "sbP": "#subBoxP5 > p",
+                            "sbI": "#subBoxP5 > img",
+                            "qlI": "images/subBoxP5.jpg",
+                            "qlT": "Custom molded parts",
+                            "qlP": document.getElementById('qlBoxPosition5')
+                        },
+                        "subBoxP6": {
+                            "sb": document.getElementById('subBoxP6'),
+                            "sbN": "subBoxP6",
+                            "sbT": "#subBoxP6 > div",
+                            "sbP": "#subBoxP6 > p",
+                            "sbI": "#subBoxP6 > img",
+                            "qlI": "images/subBoxP6.jpg",
+                            "qlT": "Round Belting",
+                            "qlP": document.getElementById('qlBoxPosition6')
+                        }
+                    }
                 },
                 "fabricationBox": {
                     "bx": document.getElementById('fabricationBox'),
-                    "bxI": "#fabricationBox > img",
-                    "bxA": "#fabricationBox > a"
+                    "txt" : document.getElementById('fabricationText'),
+                    "subBox" : {
+                        "subBoxF1": {
+                            "sb": document.getElementById('subBoxF1'),
+                            "sbN": "subBoxF1",
+                            "sbT": "#subBoxF1 > div",
+                            "sbP": "#subBoxF1 > p",
+                            "sbI": "#subBoxF1 > img",
+                            "qlI": "images/subBoxF1.jpg",
+                            "qlT": "Custom Fabrications",
+                            "qlP": document.getElementById('qlBoxPosition1')
+                        },
+                        "subBoxF2": {
+                            "sb": document.getElementById('subBoxF2'),
+                            "sbN": "subBoxF2",
+                            "sbT": "#subBoxF2 > div",
+                            "sbP": "#subBoxF2 > p",
+                            "sbI": "#subBoxF2 > img",
+                            "qlI": "images/subBoxF2.jpg",
+                            "qlT": "Roller Lagging",
+                            "qlP": document.getElementById('qlBoxPosition2')
+                        },
+                        "subBoxF3": {
+                            "sb": document.getElementById('subBoxF3'),
+                            "sbN": "subBoxF3",
+                            "sbT": "#subBoxF3 > div",
+                            "sbP": "#subBoxF3 > p",
+                            "sbI": "#subBoxF3 > img",
+                            "qlI": "images/subBoxF3.jpg",
+                            "qlT": "Profiled Belts",
+                            "qlP": document.getElementById('qlBoxPosition3')
+                        },
+                        "subBoxF4": {
+                            "sb": document.getElementById('subBoxF4'),
+                            "sbN": "subBoxF4",
+                            "sbT": "#subBoxF4 > div",
+                            "sbP": "#subBoxF4 > p",
+                            "sbI": "#subBoxF4 > img",
+                            "qlI": "images/subBoxF4.jpg",
+                            "qlT": "Perforated Belting",
+                            "qlP": document.getElementById('qlBoxPosition4')
+                        },
+                        "subBoxF5": {
+                            "sb": document.getElementById('subBoxF5'),
+                            "sbN": "subBoxF5",
+                            "sbT": "#subBoxF5 > div",
+                            "sbP": "#subBoxF5 > p",
+                            "sbI": "#subBoxF5 > img",
+                            "qlI": "images/subBoxF5.jpg",
+                            "qlT": "Teflon Coated Belting",
+                            "qlP": document.getElementById('qlBoxPosition5')
+                        },
+                        "subBoxF6": {
+                            "sb": document.getElementById('subBoxF6'),
+                            "sbN": "subBoxF6",
+                            "sbT": "#subBoxF6 > div",
+                            "sbP": "#subBoxF6 > p",
+                            "sbI": "#subBoxF6 > img",
+                            "qlI": "images/subBoxF6.jpg",
+                            "qlT": "Silicone",
+                            "qlP": document.getElementById('qlBoxPosition6')
+                        }
+                    }
                 },
                 "aboutPBBox": {
                     "bx": document.getElementById('aboutPBBox'),
-                    "bxI": "#aboutPBBox > img",
-                    "bxA": "#aboutPBBox > a"
+                    "txt" : document.getElementById('aboutText'),
+                    "subBox" : {
+                        "subBoxA1": {
+                            "sb": document.getElementById('subBoxA1'),
+                            "sbN": "subBoxA1",
+                            "sbT": "#subBoxA1 > div",
+                            "sbP": "#subBoxA1 > p",
+                            "sbI": "#subBoxA1 > img",
+                            "qlI": "images/subBoxA1.jpg",
+                            "qlT": "Address Information",
+                            "qlP": document.getElementById('qlBoxPosition1')
+                        },
+                        "subBoxA2": {
+                            "sb": document.getElementById('subBoxA2'),
+                            "sbN": "subBoxA2",
+                            "sbT": "#subBoxA2 > div",
+                            "sbP": "#subBoxA2 > p",
+                            "sbI": "#subBoxA2 > img",
+                            "qlI": "images/subBoxA2.jpg",
+                            "qlT": "About Precision Belting",
+                            "qlP": document.getElementById('qlBoxPosition2')
+                        },
+                        "map": {
+                            "sb": document.getElementById('map'),
+                            "qlI": "images/subBoxA3.jpg",
+                            "qlT": "Location Map",
+                            "qlP": document.getElementById('qlBoxPosition3')
+                        }
+                    }
                 }
             };
-          
-        function closeBox(openBoxIdentifier, bx) {
-            $(openBoxIdentifier).removeClass('boxOpen').addClass('boxTransition');
-            window.setTimeout( function() {$(openBoxIdentifier).removeClass('boxTransition').addClass('boxClosed');}, 500);
-            window.setTimeout( function() {openBox(bx);}, 750); 
+            
+            var openBoxIdentifier;
+            var selectorBuild;
+            var qlFiller;
+            var quickLinkContainerIdentity;
+            var clickedQLBox;
+            var selector;
+            function quickLink(ql) {
+                hideSubBoxes();
+                $(ql).removeClass('subBox').removeClass('hidden')
+                     .addClass('visible').addClass('expandedSubBox');  
             }
-        
-        function openBox(bx) {
-            $(bx).removeClass('boxClosed').addClass('boxTransition');
-            window.setTimeout( function() {$(bx).removeClass('boxTransition').addClass('boxOpen');}, 500);
-            window.setTimeout( function() {$(obj[bx.id].bxI).addClass('hidden');}, 500);
-            window.setTimeout( function() {$(obj[bx.id].bxA).addClass('hidden');}, 500);
-        }
-        
-        function checkBoxOpenStatus() {
-            if($("#productsBox").hasClass("boxOpen")) {
-                openBoxIdentifier = "#productsBox";
-            } else if($("#fabricationBox").hasClass("boxOpen")) {
-                openBoxIdentifier = "#fabricationBox";
-            } else if($("#aboutPBBox").hasClass("boxOpen")) {
-                openBoxIdentifier = "#aboutPBBox";
-            } else {
-                openBoxIdentifier = "";
+            function checkBoxOpenStatus() {
+                if($("#productsBox").hasClass("boxOpen")) {
+                    openBoxIdentifier = "#productsBox";
+                } else if($("#fabricationBox").hasClass("boxOpen")) {
+                    openBoxIdentifier = "#fabricationBox";
+                } else if($("#aboutPBBox").hasClass("boxOpen")) {
+                    openBoxIdentifier = "#aboutPBBox";
+                } else {
+                    openBoxIdentifier = "";
+                }
+                quickLinkContainerIdentity = openBoxIdentifier;
+            }//completed check box function
+            function mapResize() {
+                window.setTimeout( function() {google.maps.event.trigger(map, "resize");}, 1000);
             }
-        }
-        
-        function boxController(bx) {
-            $("#textContainer").addClass('hidden');
-            checkBoxOpenStatus();
-            if(openBoxIdentifier !== "") {
-                closeBox(openBoxIdentifier, bx);
-            } else {
-                openBox(obj[bx.id].bx);
+            function hideSubBoxImage(bx, sb) {
+                $(obj[bx.id].subBox[sb.id].sbI).removeClass('visible').addClass('hidden');
+                $(obj[bx.id].subBox[sb.id].sbP).removeClass('visible').addClass('hidden');
             }
-        }
+            function showSubBoxText(bx, sb){
+                $(obj[bx.id].subBox[sb.id].sbT).removeClass('hidden').addClass('visible');
+            }
+            function subBoxController(bx, sb) {
+                for (var key in obj[bx.id].subBox) {
+                    if (obj[bx.id].subBox[sb.id].sbN !== key) {
+                        $(obj[bx.id].subBox[key].sb).removeClass('visible').addClass('hidden');
+                    } else if (obj[bx.id].subBox[sb.id].sbN === key) {
+                        $(obj[bx.id].subBox[key].sb).removeClass('hidden').removeClass('subBox').addClass('visible').addClass('expandedSubBox');  
+                        hideSubBoxImage(obj[bx.id].bx, obj[bx.id].subBox[sb.id].sb);
+                        showSubBoxText(obj[bx.id].bx, obj[bx.id].subBox[sb.id].sb);
+                    }
+                }
+            }
+            function showSubBoxes() {
+                for(var outerKey in obj){
+                    for(var innerKey in obj[outerKey].subBox) {
+                        $(obj[outerKey].subBox[innerKey].sb).removeClass('expandedSubBox').addClass('subBox').removeClass('hidden').addClass('visible');
+                        $(obj[outerKey].subBox[innerKey].sbI).removeClass('hidden').addClass('visible');
+                        $(obj[outerKey].subBox[innerKey].sbP).removeClass('hidden').addClass('visible');
+                    }
+                }
+            }
+            function hideSubBoxes() {
+                for(var outerKey in obj){
+                    for(var innerKey in obj[outerKey].subBox) {
+                        $(obj[outerKey].subBox[innerKey].sb).removeClass('visible').addClass('hidden');
+                    }
+                }
+            }
+            function hideTextContainers() {
+                for(var key in obj) {
+                    $(obj[key].txt).removeClass('visible').addClass('hidden');
+                }
+            }
+            function closeBox(openBoxIdentifier, bx) {
+                hideTextContainers();
+                $(openBoxIdentifier).removeClass('boxOpen').addClass('boxTransition').attr('onclick', 'boxController(this)');;
+                window.setTimeout( function() {$(openBoxIdentifier).removeClass('boxTransition').addClass('boxClosed');}, 400);
+                window.setTimeout( function() {openBox(bx);}, 600);
+            }//complete
+            function openBox(bx) {
+                $(bx).removeClass('boxClosed').addClass('boxTransition').removeAttr("onclick");
+                window.setTimeout( function() {$(bx).removeClass('boxTransition').addClass('boxOpen');}, 400);
+                $(obj[bx.id].txt).removeClass('hidden').addClass('visible');
+                mapResize();
+                showSubBoxes();
+                populateQuickLinkContainerLabels(obj[bx.id].bx);
+            }//complete
+            function boxController(bx) {
+                $("#textContainer").addClass('hidden');
+                checkBoxOpenStatus();
+                $("#quickLinkContainer").removeClass('visible').addClass('hidden');
+                if((openBoxIdentifier !== "") && (openBoxIdentifier !== bx)) {
+                    closeBox(openBoxIdentifier, bx);
+                } else {
+                    openBox(obj[bx.id].bx);
+                }
+            }//complete
+        </script>
+        <script>
+            function initMap() {
+                var PBloc = {lat: 34.992398, lng: -81.106915};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: PBloc
+                });
+                var marker = new google.maps.Marker({
+                position: PBloc,
+                map: map
+                });
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZdB6JQHALHPpB4CsW0avO6AyHp5phxgI&callback=initMap">
         </script>
     </body>
 </html>
