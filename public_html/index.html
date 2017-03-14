@@ -16,21 +16,21 @@ Version: 1.0
     <!-- - - - - - - - - - Onload specific Scripts - - - - - - - - - - - -->
         <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
     </head>
-    <body>
-        <header></header>
+    <body class="hidden">
+        <header onclick="pageReload()"></header>
         <!-- ===================== Navigation panel ======================== -->
         <nav>
-            <a class="navBox" id="navOne" href="mailto:sales@precisionbelting.com">Contact us</a>
-            <a class="navBox" id="navTwo" onclick="boxController(productsBox)">
-                Products
+            <a id="homeButton" class="navBox" onmouseout="mouseOut(this)" 
+                 onmouseover="mouseOver(this)" onclick="pageReload()">
+                <img class="imageAdjust" src="images/home.png" alt="image fail">
+                <p class="hidden">Home</p>
             </a>
-            <a class="navBox" id="navThree" onclick="boxController(fabricationBox)">
-                Fabrication Services
+            <a id="emailButton" class="navBox" onmouseout="mouseOut(this)" 
+                 onmouseover="mouseOver(this)" href="mailto:sales@precisionbelting.com">
+                <img class="imageAdjust" src="images/email.png" alt="image fail">
+                <p class="hidden">Email us</p>
             </a>
-            <a class="navBox" id="navFour" onclick="boxController(aboutPBBox)">
-                About Precision Belting
-            </a>
-        </nav>
+        </nav><!-- navigation panel -->
         <!-- ===================== Main content ============================ -->
         <main role="main">
             <div class="transition" id="textContainer">
@@ -98,38 +98,284 @@ Version: 1.0
                      </ul>
                 </div>
             </div><!-- text container div (initial screen text) -->
-            <div class="transitionOne box boxClosed clearFix" id="productsBox" onclick="boxController(this)">
+            <div class="transitionOne box boxClosed" id="productsBox" onclick="boxController(this)">
                 <img class="transitionOne" src="images/productsBackground.jpg" alt="imageFail">
                 <a class="transitionOne" >Products<sub>(Click Me)</sub></a>
                 <div class="subBox box row1 column1 transitionOne" id="subBoxP1" onclick="subBoxController(productsBox, subBoxP1)">
                     <p class="subBoxHeaderText">Conveyor Belting</p>
                     <img class="transitionOne"  src="images/subBoxP1.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox P1</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row1 column2 transitionOne" id="subBoxP2" onclick="subBoxController(productsBox, this)">
                     <p class="subBoxHeaderText">Power Transmission Belting</p>
                     <img class="transitionOne"  src="images/subBoxP2.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox P2</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row1 column3 transitionOne" id="subBoxP3" onclick="subBoxController(productsBox, this)">
                     <p class="subBoxHeaderText">Conveyor components and accessories</p>
                     <img class="transitionOne"  src="images/subBoxP3.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox P3</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row2 column1 transitionOne" id="subBoxP4" onclick="subBoxController(productsBox, this)">
                     <p class="subBoxHeaderText">Specialty belting</p>
                     <img class="transitionOne"  src="images/subBoxP4.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox P4</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row2 column2 transitionOne" id="subBoxP5" onclick="subBoxController(productsBox, this)">
                     <p class="subBoxHeaderText">Custom molded parts</p>
                     <img class="transitionOne"  src="images/subBoxP5.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox P5</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row2 column3 transitionOne" id="subBoxP6" onclick="subBoxController(productsBox, this)">
                     <p class="subBoxHeaderText">Round belting</p>
                     <img class="transitionOne"  src="images/subBoxP6.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox P6</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
             </div><!-- products box container -->
             <div  class="transitionOne box boxClosed" id="fabricationBox" onclick="boxController(this)">
@@ -138,32 +384,278 @@ Version: 1.0
                 <div class="subBox box row1 column1 transitionOne" id="subBoxF1" onclick="subBoxController(fabricationBox, this)">
                     <p class="subBoxHeaderText">Custom fabrications</p>
                     <img class="transitionOne"  src="images/subBoxF1.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox F1</div>
+                   <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row1 column2 transitionOne" id="subBoxF2" onclick="subBoxController(fabricationBox, this)">
                     <p class="subBoxHeaderText">Roller lagging</p>
                     <img class="transitionOne"  src="images/subBoxF2.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox F2</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row1 column3 transitionOne" id="subBoxF3" onclick="subBoxController(fabricationBox, this)">
                     <p class="subBoxHeaderText">Profiled belts</p>
                     <img class="transitionOne"  src="images/subBoxF3.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox F3</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row2 column1 transitionOne" id="subBoxF4" onclick="subBoxController(fabricationBox, this)">
                     <p class="subBoxHeaderText">Perforated belting</p>
                     <img class="transitionOne"  src="images/subBoxF4.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox F4</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row2 column2 transitionOne" id="subBoxF5" onclick="subBoxController(fabricationBox, this)">
                     <p class="subBoxHeaderText">Teflon coated belting</p>
                     <img class="transitionOne"  src="images/subBoxF5.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox F5</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
                 <div class="subBox box row2 column3 transitionOne" id="subBoxF6" onclick="subBoxController(fabricationBox, this)">
                     <p class="subBoxHeaderText">Silicone</p>
                     <img class="transitionOne"  src="images/subBoxF6.jpg" alt="imageFail">
-                    <div class="hidden"> this will be the text for subBox F6</div>
+                    <div class="hidden expansionContent transitionOne">
+                        <div class="detailHeader">Header</div>
+                        <div class="topList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="topImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="middleList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="middleImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                        <div class="bottomList expansionText">
+                            <ul>
+                                <li>Sprockets and Sheaves
+                                <li>Rollers
+                                <li>Custom Molded Parts
+                                <li>Scraper Blades
+                                <li>Industrial Hose
+                                <li>Vacuum Cups
+                                <li>Custom Machined Parts
+                                <li>Pulley and Roller Coverings
+                             </ul>
+                        </div>
+                        <img class="bottomImage expansionImage"  src="images/subBoxP1.jpg" alt="imageFail">
+                    </div>
                 </div>
             </div><!-- fabrication box container -->
             <div  class="transitionOne box boxClosed" id="aboutPBBox" onclick="boxController(aboutPBBox, this)">
@@ -187,71 +679,57 @@ Version: 1.0
             <div class="textContainer hidden transition" id="productsText">
                 Quick links
                 <ul>
-                    <li onclick="quickLink(subBoxP1)">Conveyor Belting
-                    <li onclick="quickLink(subBoxP2)">Power Transmission belting
-                    <li onclick="quickLink(subBoxP3)">Conveyor components and accessories
-                    <li onclick="quickLink(subBoxP4)">Specialty belting
-                    <li onclick="quickLink(subBoxP5)">Custom molded parts
-                    <li onclick="quickLink(subBoxP6)">Round belting
+                    <li onclick="quickLink(productsBox, subBoxP1)">Conveyor Belting
+                    <li onclick="quickLink(productsBox, subBoxP2)">Power Transmission belting
+                    <li onclick="quickLink(productsBox, subBoxP3)">Conveyor components and accessories
+                    <li onclick="quickLink(productsBox, subBoxP4)">Specialty belting
+                    <li onclick="quickLink(productsBox, subBoxP5)">Custom molded parts
+                    <li onclick="quickLink(productsBox, subBoxP6)">Round belting
                 </ul>
-            </div>
+            </div><!-- products box quick link list -->
             <div class="textContainer hidden transition" id="fabricationText">
                 Quick links
                 <ul>
-                    <li onclick="quickLink(subBoxF1)">Custom Fabrication
-                    <li onclick="quickLink(subBoxF2)">Roller lagging
-                    <li onclick="quickLink(subBoxF3)">Profiled Belts
-                    <li onclick="quickLink(subBoxF4)">Perforated belting
-                    <li onclick="quickLink(subBoxF5)">Teflon(c) coated belting
-                    <li onclick="quickLink(subBoxF6)">Silicone
+                    <li onclick="quickLink(fabricationBox, subBoxF1)">Custom Fabrication
+                    <li onclick="quickLink(fabricationBox, subBoxF2)">Roller lagging
+                    <li onclick="quickLink(fabricationBox, subBoxF3)">Profiled Belts
+                    <li onclick="quickLink(fabricationBox, subBoxF4)">Perforated belting
+                    <li onclick="quickLink(fabricationBox, subBoxF5)">Teflon(c) coated belting
+                    <li onclick="quickLink(fabricationBox, subBoxF6)">Silicone
                 </ul>
-            </div>
+            </div><!-- fabrication box quick link list -->
             <div class="textContainer hidden transition" id="aboutText">
-                <div class="blueText">Quick links
-                    <ul>
-                        <li onclick="quickLink(subBoxA2)">About Precision Belting
-                        <li onclick="quickLink(map)">Show map
-                    </ul>
-                </div>
-                <div>Contact information
-                    <ul>
-                        <li>Phone: (803)-329-2189
-                        <li>Fax: (803)-329-0861
-                        <li>PO BOX 10307, Rock Hill SC 29731
-                        <li>5453 Old York Rd, Rock Hill SC 29732
-                    </ul>
-                </div>
-            </div>
+                Quick links
+                <ul>
+                    <li onclick="quickLink(aboutPBBox, subBoxA2)">About Precision Belting
+                    <li onclick="quickLink(aboutPBBox, map)">Show map
+                </ul>
+            </div><!-- about box quick link list -->
         </main>
         <!-- ===================== Footer ================================== -->
-        <footer>
-            <div class="footerBox" id="footerOne">
-                PO BOX 10307 * Rock Hill SC 29731
-            </div>
-            <div class="footerBox" id="footerTwo">
-                5453 Old York Rd * Rock Hill SC 29732
-            </div>
-            <div class="footerBox" id="footerThree">
-                Phone: (803)329-2189
-            </div>
-            <div class="footerBox" id="footerFour">
-                Fax: (803)329-0861
-            </div>
-        </footer>
+        <footer></footer>
         <!-- ===================== Operation scripting ===================== -->
+        <script>
+            function pageReload() {
+                history.go(0);
+            }
+        </script>
         <script>
             function debuggingAlertFunction() {
             alert("debugging alert function reached");
         }
-        </script>
+        </script><!-- debugging alert function script -->
         <script>
+            var delay;  //This value will be used to add a delay to the open box function. 
+                        //This delay accounts for any boxes that are currently open time to close.
             var obj = {
                 "productsBox": {
                     "bx": document.getElementById('productsBox'),
                     "txt" : document.getElementById('productsText'),
+                    "attr": "subBoxController(productsBox, this)",
                     "subBox" : {
                         "subBoxP1": {
-                            "sb": document.getElementById('subBoxP1'),
+                            "sb" : document.getElementById('subBoxP1'),
                             "sbN": "subBoxP1",
                             "sbT": "#subBoxP1 > div",
                             "sbP": "#subBoxP1 > p",
@@ -261,7 +739,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition1')
                         },
                         "subBoxP2": {
-                            "sb": document.getElementById('subBoxP2'),
+                            "sb" : document.getElementById('subBoxP2'),
                             "sbN": "subBoxP2",
                             "sbT": "#subBoxP2 > div",
                             "sbP": "#subBoxP2 > p",
@@ -271,7 +749,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition2')
                         },
                         "subBoxP3": {
-                            "sb": document.getElementById('subBoxP3'),
+                            "sb" : document.getElementById('subBoxP3'),
                             "sbN": "subBoxP3",
                             "sbT": "#subBoxP3 > div",
                             "sbP": "#subBoxP3 > p",
@@ -281,7 +759,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition3')
                         },
                         "subBoxP4": {
-                            "sb": document.getElementById('subBoxP4'),
+                            "sb" : document.getElementById('subBoxP4'),
                             "sbN": "subBoxP4",
                             "sbT": "#subBoxP4 > div",
                             "sbP": "#subBoxP4 > p",
@@ -291,7 +769,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition4')
                         },
                         "subBoxP5": {
-                            "sb": document.getElementById('subBoxP5'),
+                            "sb" : document.getElementById('subBoxP5'),
                             "sbN": "subBoxP5",
                             "sbT": "#subBoxP5 > div",
                             "sbP": "#subBoxP5 > p",
@@ -301,7 +779,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition5')
                         },
                         "subBoxP6": {
-                            "sb": document.getElementById('subBoxP6'),
+                            "sb" : document.getElementById('subBoxP6'),
                             "sbN": "subBoxP6",
                             "sbT": "#subBoxP6 > div",
                             "sbP": "#subBoxP6 > p",
@@ -315,9 +793,10 @@ Version: 1.0
                 "fabricationBox": {
                     "bx": document.getElementById('fabricationBox'),
                     "txt" : document.getElementById('fabricationText'),
+                    "attr": "subBoxController(fabricationBox, this)",
                     "subBox" : {
                         "subBoxF1": {
-                            "sb": document.getElementById('subBoxF1'),
+                            "sb" : document.getElementById('subBoxF1'),
                             "sbN": "subBoxF1",
                             "sbT": "#subBoxF1 > div",
                             "sbP": "#subBoxF1 > p",
@@ -327,7 +806,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition1')
                         },
                         "subBoxF2": {
-                            "sb": document.getElementById('subBoxF2'),
+                            "sb" : document.getElementById('subBoxF2'),
                             "sbN": "subBoxF2",
                             "sbT": "#subBoxF2 > div",
                             "sbP": "#subBoxF2 > p",
@@ -337,7 +816,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition2')
                         },
                         "subBoxF3": {
-                            "sb": document.getElementById('subBoxF3'),
+                            "sb" : document.getElementById('subBoxF3'),
                             "sbN": "subBoxF3",
                             "sbT": "#subBoxF3 > div",
                             "sbP": "#subBoxF3 > p",
@@ -347,7 +826,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition3')
                         },
                         "subBoxF4": {
-                            "sb": document.getElementById('subBoxF4'),
+                            "sb" : document.getElementById('subBoxF4'),
                             "sbN": "subBoxF4",
                             "sbT": "#subBoxF4 > div",
                             "sbP": "#subBoxF4 > p",
@@ -357,7 +836,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition4')
                         },
                         "subBoxF5": {
-                            "sb": document.getElementById('subBoxF5'),
+                            "sb" : document.getElementById('subBoxF5'),
                             "sbN": "subBoxF5",
                             "sbT": "#subBoxF5 > div",
                             "sbP": "#subBoxF5 > p",
@@ -367,7 +846,7 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition5')
                         },
                         "subBoxF6": {
-                            "sb": document.getElementById('subBoxF6'),
+                            "sb" : document.getElementById('subBoxF6'),
                             "sbN": "subBoxF6",
                             "sbT": "#subBoxF6 > div",
                             "sbP": "#subBoxF6 > p",
@@ -381,9 +860,10 @@ Version: 1.0
                 "aboutPBBox": {
                     "bx": document.getElementById('aboutPBBox'),
                     "txt" : document.getElementById('aboutText'),
+                    "attr": "subBoxController(aboutPBBox, this)",
                     "subBox" : {
                         "subBoxA1": {
-                            "sb": document.getElementById('subBoxA1'),
+                            "sb" : document.getElementById('subBoxA1'),
                             "sbN": "subBoxA1",
                             "sbT": "#subBoxA1 > div",
                             "sbP": "#subBoxA1 > p",
@@ -393,7 +873,8 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition1')
                         },
                         "subBoxA2": {
-                            "sb": document.getElementById('subBoxA2'),
+                            "box": "subBoxController(aboutPBBox, this)",
+                            "sb" : document.getElementById('subBoxA2'),
                             "sbN": "subBoxA2",
                             "sbT": "#subBoxA2 > div",
                             "sbP": "#subBoxA2 > p",
@@ -403,120 +884,152 @@ Version: 1.0
                             "qlP": document.getElementById('qlBoxPosition2')
                         },
                         "map": {
-                            "sb": document.getElementById('map'),
+                            "box": "subBoxController(aboutPBBox, this)",
+                            "sb" : document.getElementById('map'),
                             "qlI": "images/subBoxA3.jpg",
                             "qlT": "Location Map",
                             "qlP": document.getElementById('qlBoxPosition3')
                         }
                     }
                 }
-            };
-            
-            var openBoxIdentifier;
-            var selectorBuild;
-            var qlFiller;
-            var quickLinkContainerIdentity;
-            var clickedQLBox;
-            var selector;
-            function quickLink(ql) {
-                hideSubBoxes();
-                $(ql).removeClass('subBox').removeClass('hidden')
-                     .addClass('visible').addClass('expandedSubBox');  
-            }
-            function checkBoxOpenStatus() {
-                if($("#productsBox").hasClass("boxOpen")) {
-                    openBoxIdentifier = "#productsBox";
-                } else if($("#fabricationBox").hasClass("boxOpen")) {
-                    openBoxIdentifier = "#fabricationBox";
-                } else if($("#aboutPBBox").hasClass("boxOpen")) {
-                    openBoxIdentifier = "#aboutPBBox";
-                } else {
-                    openBoxIdentifier = "";
+            };//three main box object
+            var nav = {
+                "homeButton": {
+                    "nv": document.getElementById('homeButton'),
+                    "nvI": "#homeButton > img",
+                    "nvP": "#homeButton >p"
+                },
+                "emailButton": {
+                    "nv": document.getElementById('emailButton'),
+                    "nvI": "#emailButton  > img",
+                    "nvP": "#emailButton > p" 
                 }
-                quickLinkContainerIdentity = openBoxIdentifier;
-            }//completed check box function
+            }; // navigation menu object
+            function mouseOver(nv) {
+                $(nav[nv.id].nvI).addClass("hidden").removeClass('visible');
+                $(nav[nv.id].nvP).addClass('visible').removeClass('hidden');
+            } //mouse over function for the navigation buttons
+            function mouseOut(nv) {
+                $(nav[nv.id].nvI).addClass('visible').removeClass('hidden');
+                $(nav[nv.id].nvP).addClass('hidden').removeClass('visible');
+            } // mouseoff function for the navigation buttons
+            function quickLink(bx, sb) {
+                hideSubBoxes();
+                $(sb).removeClass('subBox').removeClass('hidden')
+                     .addClass('visible').addClass('expandedSubBox');
+                hideSubBoxImage(obj[bx.id].bx, obj[bx.id].subBox[sb.id].sb);
+                showSubBoxText(obj[bx.id].bx, obj[bx.id].subBox[sb.id].sb);
+            }//controls the quick links buttons to the right of the expanded main boxes
             function mapResize() {
                 window.setTimeout( function() {google.maps.event.trigger(map, "resize");}, 1000);
-            }
+            }//resizes the map (for use with the "about PB" quick link buttons)
             function hideSubBoxImage(bx, sb) {
                 $(obj[bx.id].subBox[sb.id].sbI).removeClass('visible').addClass('hidden');
                 $(obj[bx.id].subBox[sb.id].sbP).removeClass('visible').addClass('hidden');
-            }
+            }//hides the associated image to a sub box to allow for content to display during expansion
             function showSubBoxText(bx, sb){
                 $(obj[bx.id].subBox[sb.id].sbT).removeClass('hidden').addClass('visible');
-            }
+            }//shows the content of a sub box upon expansion
             function subBoxController(bx, sb) {
                 for (var key in obj[bx.id].subBox) {
+                    selectorBuild = "subBoxController(" + obj[bx.id] + "), this)";
                     if (obj[bx.id].subBox[sb.id].sbN !== key) {
-                        $(obj[bx.id].subBox[key].sb).removeClass('visible').addClass('hidden');
+                        $(obj[bx.id].subBox[key].sb).removeClass('visible').addClass('hidden').removeAttr("onclick");
                     } else if (obj[bx.id].subBox[sb.id].sbN === key) {
-                        $(obj[bx.id].subBox[key].sb).removeClass('hidden').removeClass('subBox').addClass('visible').addClass('expandedSubBox');  
+                        $(obj[bx.id].subBox[key].sb).removeClass('hidden').removeClass('subBox')
+                                .addClass('visible').addClass('expandedSubBox');
                         hideSubBoxImage(obj[bx.id].bx, obj[bx.id].subBox[sb.id].sb);
                         showSubBoxText(obj[bx.id].bx, obj[bx.id].subBox[sb.id].sb);
                     }
                 }
-            }
+            }//controls the animations for the 14 sub boxes
             function showSubBoxes() {
                 for(var outerKey in obj){
                     for(var innerKey in obj[outerKey].subBox) {
-                        $(obj[outerKey].subBox[innerKey].sb).removeClass('expandedSubBox').addClass('subBox').removeClass('hidden').addClass('visible');
+                        $(obj[outerKey].subBox[innerKey].sb).removeClass('expandedSubBox').addClass('subBox')
+                                .removeClass('hidden').addClass('visible').attr('onclick', obj[outerKey].attr);
                         $(obj[outerKey].subBox[innerKey].sbI).removeClass('hidden').addClass('visible');
                         $(obj[outerKey].subBox[innerKey].sbP).removeClass('hidden').addClass('visible');
+                        $(obj[outerKey].subBox[innerKey].sbT).removeClass('visible').addClass('hidden');
                     }
                 }
-            }
+            }//shows the sub boxes when a main box is expanded
             function hideSubBoxes() {
                 for(var outerKey in obj){
                     for(var innerKey in obj[outerKey].subBox) {
-                        $(obj[outerKey].subBox[innerKey].sb).removeClass('visible').addClass('hidden');
+                        $(obj[outerKey].subBox[innerKey].sb).removeClass('visible').addClass('hidden').removeAttr("onclick");   
                     }
                 }
-            }
+            }//hides the sub boxes when a sub box is clicked
             function hideTextContainers() {
-                for(var key in obj) {
-                    $(obj[key].txt).removeClass('visible').addClass('hidden');
+                for(var key in obj) { 
+                    $(obj[key].txt).removeClass('visible').addClass('hidden'); 
                 }
-            }
-            function closeBox(openBoxIdentifier, bx) {
-                hideTextContainers();
-                $(openBoxIdentifier).removeClass('boxOpen').addClass('boxTransition').attr('onclick', 'boxController(this)');;
-                window.setTimeout( function() {$(openBoxIdentifier).removeClass('boxTransition').addClass('boxClosed');}, 400);
-                window.setTimeout( function() {openBox(bx);}, 600);
-            }//complete
-            function openBox(bx) {
-                $(bx).removeClass('boxClosed').addClass('boxTransition').removeAttr("onclick");
-                window.setTimeout( function() {$(bx).removeClass('boxTransition').addClass('boxOpen');}, 400);
-                $(obj[bx.id].txt).removeClass('hidden').addClass('visible');
-                mapResize();
-                showSubBoxes();
-                populateQuickLinkContainerLabels(obj[bx.id].bx);
-            }//complete
-            function boxController(bx) {
-                $("#textContainer").addClass('hidden');
-                checkBoxOpenStatus();
-                $("#quickLinkContainer").removeClass('visible').addClass('hidden');
-                if((openBoxIdentifier !== "") && (openBoxIdentifier !== bx)) {
-                    closeBox(openBoxIdentifier, bx);
+            }//hides the quick link lists when a main box moves to it's original position
+            function checkBoxOpenStatus(clickedBox) {
+                if($("#productsBox").hasClass("boxOpen")) {
+                    closeBox(obj.productsBox.bx, clickedBox);
+                    delay = 200; 
+                } else if($("#fabricationBox").hasClass("boxOpen")) {
+                    closeBox(obj.fabricationBox.bx, clickedBox);
+                    delay = 200;
+                } else if($("#aboutPBBox").hasClass("boxOpen")) {
+                    closeBox(obj.aboutPBBox.bx, clickedBox); 
+                    delay = 200;
                 } else {
-                    openBox(obj[bx.id].bx);
+                    delay = 0;
                 }
-            }//complete
-        </script>
+            } // checks the three main boxes to see if any are currently open(expanded)
+            function disableBoxClick() {
+                for(var key in obj) {
+                    $(obj[key].bx).removeAttr("onclick");
+                }
+            }//disables the three main boxes onclick function to prevent the user from clicking during animation
+            function enableBoxClick() {
+                for(var key in obj) {
+                    $(obj[key].bx).attr('onclick', 'boxController(this)');
+                }
+            } // enables the three main boxes click function to allow the user to select a different main box
+            function closeBox(openBox, clickedBox) {
+                hideTextContainers();
+                $(obj[openBox.id].bx).removeClass('boxOpen').addClass('boxTransition').attr('onclick', 'boxController(this)');
+                window.setTimeout( function() {$(obj[openBox.id].bx).removeClass('boxTransition').addClass('boxClosed');}, 400);
+            }//closes any expanded boxes so that the clicked box may be expanded
+            function expandBox(clickedBox) {
+                window.setTimeout( function() {$(clickedBox).removeClass('boxClosed').addClass('boxTransition').removeAttr("onclick");}, delay);
+                window.setTimeout( function() {$(clickedBox).removeClass('boxTransition').addClass('boxOpen');}, 400 + delay);
+                window.setTimeout( function() {$(obj[clickedBox.id].txt).removeClass('hidden').addClass('visible');}, 400 + delay);
+                window.setTimeout( function() {$(clickedBox).removeAttr("onclick");}, 1000 + delay);
+                mapResize(); 
+                showSubBoxes();
+            }//opens the clicked main box
+            function boxController(clickedBox) {
+                disableBoxClick();
+                window.setTimeout( function() {enableBoxClick();}, 750 + delay);
+                $("#textContainer").addClass('hidden');
+                checkBoxOpenStatus(obj[clickedBox.id].bx);
+                window.setTimeout( function() {expandBox(obj[clickedBox.id].bx);}, delay);
+                window.setTimeout( function() {enableBoxClick();}, 750 + delay);
+            }//main box controller
+        </script><!-- main functionality script -->
         <script>
             function initMap() {
                 var PBloc = {lat: 34.992398, lng: -81.106915};
                 var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: PBloc
+                    zoom: 12,
+                    center: PBloc
                 });
                 var marker = new google.maps.Marker({
-                position: PBloc,
-                map: map
+                    position: PBloc,
+                    map: map
                 });
             }
-        </script>
+        </script><!-- map creation script -->
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZdB6JQHALHPpB4CsW0avO6AyHp5phxgI&callback=initMap">
-        </script>
+        </script><!-- map import script -->
+        <script>
+            window.onload = function() {$(document.body).removeClass('hidden').addClass('visible');};
+        </script><!-- ANTI FOUC SCRIPT / MUST BE LAST SCRIPT IN DOM -->
     </body>
 </html>
